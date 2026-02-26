@@ -17,7 +17,10 @@ public class DoubleClick {
         driver.manage().window().maximize();
         Thread.sleep(2000);
         Actions rv = new Actions(driver);
-
+        WebElement close = driver.findElement(By.xpath("//span[@role='button']"));
+        if (close.isDisplayed()) {
+            close.click();
+        }
         WebElement loginButton = driver.findElement(By.xpath("//span[text()='Login']"));
         Thread.sleep(2000);
 
