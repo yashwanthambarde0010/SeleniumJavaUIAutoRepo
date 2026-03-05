@@ -25,7 +25,9 @@ public class DoubleClick {
         Thread.sleep(2000);
 
         rv.moveToElement(loginButton).perform();
+        
         driver.close();
     }
 
 }
+
